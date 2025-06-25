@@ -201,7 +201,7 @@
             gridWrapper.innerHTML = '<div class="flex justify-center items-center h-full"><div class="loader"></div></div>';
 
             // ИЗМЕНЕНИЕ: URL теперь всегда относительный для работы с Vercel
-            const backendUrl = `/api/events?calendar_id=${encodeURIComponent(currentPoint.calendarId)}&year=${year}&month=${month + 1}`;
+            const backendUrl = `https://music-point-api.onrender.com/api/events?calendar_id=${encodeURIComponent(currentPoint.calendarId)}&year=${year}&month=${month + 1}`;
 
             try {
                 const response = await fetch(backendUrl);
